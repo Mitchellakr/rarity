@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500&display=swap');
+
+@font-face {
+    font-family: 'NeueMachina', cursive;
+    src: url(font/NeueMachina-Ultrabold.otf);
+}
+
+h5 {
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: 0;
+    border: none;
+}
+
+:root {
+    --dark-color: #111111;
+    --primary-color: #878CFF;
+    --secondary-color: #28283E;
+    --white: #fff;
+    --gray: rgb(61, 61, 61);
+}
+
+.primary-btn,
+.secondary-btn {
+    width: 200px;
+    padding: .5em;
+    border-radius: 10px;
+    color: var(--white);
+    display: flex;
+    gap: .3em;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+}
+
+.secondary-btn {
+    border: 1px dashed var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.tertiary-btn {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .5em 1em;
+    border-radius: 50px;
+    border: 1px solid var(--white);
+    color: white;
+}
+
+
+
+body {
+    /* font-family: 'NeueMachina', cursive; */
+    font-family: 'Oxanium', cursive;
+}
+
+/***************************this is the header section*******************************/
+
+header {
+    background-color: var(--dark-color);
+    padding: 1em;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav,
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.nav-links li a {
+    color: var(--white);
+}
+
+.search {
+    font-family: 'Oxanium', cursive;
+    font-size: 1.1em;
+    margin-right: auto;
+    margin-left: 3em;
+    padding: .7em;
+    border-radius: 10px;
+    width: 300px;
+    background-color: var(--gray);
+    opacity: .4em;
+    color: var(--white);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: .3em;
+}
+
+/************************************ this is the hero section stlying ************************************/
+
+.hero-section {
+    background-image: url(images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    color: var(--white);
+    padding: 2em;
+}
+
+.hero-images {
+    display: flex;
+    align-items: flex-start;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+}
+
+.center {
+    z-index: 2;
+}
+
+.splash-screen.display-none {
+    opacity: 0;
+    z-index: -10;
+    transition: all 1s;
+}
+
+
+/* this is for the main section styling */
+
+.hero-section-main {
+    background-image: url(images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero-content-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    color: var(--white);
+    padding: 2em;
+}
+
+.hero-images-main {
+    display: flex;
+    align-items: flex-start;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+/* this is the notable cards section styling */
+
+.notable-drops-section,
+.trading-section,
+.top-collection,
+.creator-content,
+.explore-market {
+    background-image: url(images/general-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+}
+
+.notable-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+.notable-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    padding: 3em;
+}
+
+.notable-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notable-cards h2,
+.collection-text h2 {
+    font-size: 1.4em;
+}
+
+.notable-card::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.924) 25%, rgba(27, 26, 26, 0) 80%);
+}
+
+.notable-writeup {
+    position: absolute;
+    bottom: 20px;
+    z-index: 4;
+}
+
+.notable-card img {
+    border-radius: 20px;
+    border: 8px solid var(--secondary-color);
+    width: 100%;
+}
+
+/* this is the trading section styling */
+
+.trading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    padding-top: 4em;
+}
+
+.trading-grid {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 3em;
+}
+
+.trading-grid-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.trading-grid-top,
+.trading-grid-bottom {
+    padding: .5em;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+}
+
+.trading-grid-top img {
+    width: 100%;
+}
+
+.trading-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+}
+
+.bids,
+.ends {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.profile,
+.eth {
+    display: flex;
+    align-items: center;
+    gap: .4em;
+}
+
+
+/* top collection section */
+
+.topcollection-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    text-align: center;
+    padding-top: 4em;
+}
+
+.collection-grid {
+    display: grid;
+    /* grid-template-columns: repeat(3, .5fr); */
+    grid-template-columns: .5fr;
+    gap: 2em;
+}
+
+.collection-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding: 1em;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 2em;
+}
+
+.collection-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.collection-images {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.collection-image-top,
+.collection-bottom {
+    gap: 1em;
+    display: flex;
+}
+
+/* creator section stlying */
+
+.creator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 8em 0;
+}
+
+.creator-section {
+    position: relative;
+}
+
+.creator-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: url(images/spotlight-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* this is the explore option section styling */
+
+.explore-options {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.market-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding-bottom: 4em;
+}
+
+/* this is the footer section styling */
+
+footer {
+    background-color: var(--gray);
+    padding: 2em;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 2em;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 2px solid rgb(106, 106, 106);
+    margin-right: 5em;
+}
+
+.rarity {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+footer p {
+    color: var(--white);
+    font-size: 2em;
+}
+
+.rarity ul,
+.quick {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.rarity a {
+    color: rgb(106, 106, 106);
+}
+
+.socials {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.socials img {
+    padding: 1em;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgb(106, 106, 106);
+}
