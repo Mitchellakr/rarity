@@ -37,6 +37,10 @@ h2 {
     --gray: rgb(61, 61, 61);
 }
 
+.header-sticky.sticky {
+    box-shadow: 0 10px 30px #0000006d;
+}
+
 .primary-btn,
 .secondary-btn {
     width: 200px;
@@ -47,6 +51,12 @@ h2 {
     gap: .3em;
     align-items: center;
     justify-content: center;
+}
+
+html {
+    /* overflow: hidden; */
+    overflow-x: none;
+    scrollbar-width: none;
 }
 
 .primary-btn {
@@ -71,7 +81,6 @@ h2 {
 
 
 body {
-    /* font-family: 'NeueMachina', cursive; */
     font-family: 'Oxanium', cursive;
 }
 
@@ -79,6 +88,9 @@ body {
 
 header {
     background-color: var(--dark-color);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
     padding: 1em;
 }
 
@@ -125,6 +137,7 @@ nav,
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    padding-top: 8em;
 }
 
 .hero-content {
@@ -175,6 +188,7 @@ nav,
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    padding-top: 8em;
 }
 
 .hero-content-main {
@@ -198,6 +212,56 @@ nav,
     gap: 1em;
 }
 
+/************************************************* animation starts *************************************************/
+.hero-images-main {
+    position: relative;
+}
+
+.nft1 {
+    z-index: 9;
+}
+
+.nft2,
+.nft4 {
+    position: absolute;
+    opacity: 0;
+}
+
+.nft3 {
+    z-index: 4;
+}
+
+.nft2 {
+    left: 0;
+    z-index: 5;
+    animation: moveleft ease forwards 2s 5s;
+}
+
+.nft4 {
+    right: 0;
+    animation: moveright ease forwards 2s 5s;
+}
+
+@keyframes moveright {
+    to {
+        margin-right: -150px;
+        margin-top: 100px;
+        opacity: 1;
+        width: 150px;
+    }
+}
+
+@keyframes moveleft {
+    to {
+        margin-left: -150px;
+        margin-top: 100px;
+        opacity: 1;
+        width: 150px;
+    }
+}
+
+/************************************************* animation ends *************************************************/
+
 /* this is the notable cards section styling */
 
 .notable-drops-section,
@@ -217,6 +281,7 @@ nav,
     flex-direction: column;
     justify-content: center;
     gap: 2em;
+    padding-top: 8em;
 }
 
 .notable-cards {
@@ -273,8 +338,8 @@ nav,
 
 .trading-grid {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr; */
     gap: 2em;
     padding: 3em;
 }
@@ -330,8 +395,8 @@ nav,
 
 .collection-grid {
     display: grid;
-    /* grid-template-columns: repeat(3, .5fr); */
-    grid-template-columns: .5fr;
+    grid-template-columns: repeat(3, .5fr);
+    /* grid-template-columns: .5fr; */
     gap: 2em;
 }
 
@@ -366,16 +431,9 @@ nav,
 
 /* creator section stlying */
 
-.creator-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-    padding: 8em 0;
-}
-
 .creator-section {
     position: relative;
+    overflow: hidden;
 }
 
 .creator-section::before {
@@ -390,6 +448,15 @@ nav,
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.creator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 8em 0;
+}
+
 
 /* this is the explore option section styling */
 
