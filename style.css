@@ -92,7 +92,7 @@ html {
     margin-right: -800px;
     margin-top: 250px;
     opacity: 0;
-    animation: showthis 4s ease 13s forwards ;
+    animation: showthis 4s ease 13s forwards;
 }
 
 @keyframes showthis {
@@ -510,8 +510,7 @@ nav,
 
 .collection-grid {
     display: grid;
-    grid-template-columns: repeat(3, .57fr);
-    /* grid-template-columns: .5fr; */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2em;
     padding: 2em;
 }
@@ -521,7 +520,7 @@ nav,
     grid-template-columns: 1fr;
     background-color: var(--secondary-color);
     border-radius: 20px;
-    padding: .5em;
+    padding: 1em;
     align-items: center;
     justify-content: center;
     gap: 2em;
@@ -533,20 +532,7 @@ nav,
     gap: 1em;
 }
 
-.collection-images {
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
-}
-
-.collection-image-top,
-.collection-bottom {
-    gap: 1em;
-    display: flex;
-}
-
-.collection-image-top img,
-.collection-bottom img {
+.collection-image img {
     width: 100%;
 }
 
