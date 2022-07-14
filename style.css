@@ -78,7 +78,117 @@ html {
     color: white;
 }
 
+.click {
+    padding: 1em 1.5em;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3em;
+    position: absolute;
+    z-index: 9;
+    margin-right: -800px;
+    margin-top: 250px;
+    opacity: 0;
+    animation: showthis 4s ease 13s forwards ;
+}
 
+@keyframes showthis {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    98% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* animation section starts */
+
+.user-price {
+    position: absolute;
+    margin-top: 200px;
+    transition: all 1s ease;
+    animation: go 9s ease forwards 7s;
+    z-index: 10;
+}
+
+.user,
+.price {
+    height: 50px;
+    width: 200px;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    background-color: var(--white);
+    position: absolute;
+    justify-content: center;
+
+}
+
+.price {
+    margin-top: 45px;
+    margin-left: 50px;
+}
+
+@keyframes go {
+    0% {
+        opacity: 1;
+
+    }
+
+    10% {
+
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        margin-top: -10px;
+        margin-left: 400px;
+    }
+
+    60% {
+
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    80% {
+        margin-top: 100px;
+        margin-left: -1000px;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 100px;
+        margin-left: -1000px;
+        opacity: 0;
+    }
+}
+
+/* animation section ends */
 
 body {
     font-family: 'Oxanium', cursive;
@@ -234,12 +344,12 @@ nav,
 .nft2 {
     left: 0;
     z-index: 5;
-    animation: moveleft ease forwards 2s 5s;
+    animation: moveleft ease forwards 2s 17s;
 }
 
 .nft4 {
     right: 0;
-    animation: moveright ease forwards 2s 5s;
+    animation: moveright ease forwards 2s 17s;
 }
 
 @keyframes moveright {
@@ -400,9 +510,10 @@ nav,
 
 .collection-grid {
     display: grid;
-    grid-template-columns: repeat(3, .5fr);
+    grid-template-columns: repeat(3, .57fr);
     /* grid-template-columns: .5fr; */
     gap: 2em;
+    padding: 2em;
 }
 
 .collection-card {
@@ -410,8 +521,8 @@ nav,
     grid-template-columns: 1fr;
     background-color: var(--secondary-color);
     border-radius: 20px;
-    padding: 1em;
-    /* align-items: center; */
+    padding: .5em;
+    align-items: center;
     justify-content: center;
     gap: 2em;
 }
@@ -432,6 +543,11 @@ nav,
 .collection-bottom {
     gap: 1em;
     display: flex;
+}
+
+.collection-image-top img,
+.collection-bottom img {
+    width: 100%;
 }
 
 /* creator section stlying */

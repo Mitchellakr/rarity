@@ -28,7 +28,7 @@ window.onscroll = function () {
 // var rule = CSSRulePlugin.getRule(".hero-btn"); //get the rule
 // gsap.to(rule, {duration: 5, cssRule: {backgroundColor: "#600", color: "white"}});
 
-gsap.to('.nft2', { duration: 2, x: '250px', y: '-20px', ease: 'back', delay: 7, scale: 1.5 })
-gsap.to('.nft3', { duration: 2, x: '-80px', y: '40px', ease: 'back', delay: 7, scale: .7, z: -1 })
-gsap.to('.nft4', { duration: 2, x: '-250px', y: '-20px', ease: 'back', delay: 7, scale: 1.5 })
-gsap.to('.nft5', { duration: 2, x: '80px', y: '40px', ease: 'back', delay: 7, scale: .7 })
+gsap.to('.nft2', { duration: 2, x: '250px', y: '-20px', ease: 'back', delay: 19, scale: 1.5 })
+gsap.to('.nft3', { duration: 2, x: '-80px', y: '40px', ease: 'back', delay: 19, scale: .7, z: -1 })
+gsap.to('.nft4', { duration: 2, x: '-250px', y: '-20px', ease: 'back', delay: 19, scale: 1.5 })
+gsap.to('.nft5', { duration: 2, x: '80px', y: '40px', ease: 'back', delay: 19, scale: .7 })
