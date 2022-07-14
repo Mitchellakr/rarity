@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     setTimeout(() => {
 
         splash.classList.add('display-none');
-        
+
     }, 5000);
 });
 
@@ -32,3 +32,9 @@ gsap.to('.nft2', { duration: 2, x: '250px', y: '-20px', ease: 'back', delay: 19,
 gsap.to('.nft3', { duration: 2, x: '-80px', y: '40px', ease: 'back', delay: 19, scale: .7, z: -1 })
 gsap.to('.nft4', { duration: 2, x: '-250px', y: '-20px', ease: 'back', delay: 19, scale: 1.5 })
 gsap.to('.nft5', { duration: 2, x: '80px', y: '40px', ease: 'back', delay: 19, scale: .7 })
+
+
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    getElementById('body').style.display = 'none';
+}

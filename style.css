@@ -637,3 +637,50 @@ footer p {
     border-radius: 10px;
     background-color: rgb(106, 106, 106);
 }
+
+/* the media query section  */
+
+/* @media only screen and (max-width:1257px) {
+    nav {
+        display: none;
+    }
+} */
+
+/* @media only screen and (max-width:1290px) {
+
+    .notable-cards,
+    .trading-grid,
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+} */
+@media only screen and (max-width:1290px) {
+    .trading-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* @media only screen and (max-width:1230px) {
+    .logo-area {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width:1070px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-area {
+        border-right: none;
+    }
+} */
+
+@media only screen and (max-device-width : 1265px) {
+
+    html,
+    body {
+        display: none;
+    }
+}
